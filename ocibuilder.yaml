@@ -41,6 +41,6 @@ build:
       distroless: false
       cache: false
       purge: false
-      imageContext:
+      context:
         localContext:
           contextPath: .
