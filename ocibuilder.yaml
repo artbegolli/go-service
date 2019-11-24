@@ -15,7 +15,7 @@ build:
               - ENTRYPOINT ./goapp
   steps:
     - metadata:
-        name: registry.hub.docker.com/ocibuildere2e/go-test-service
+        name: docker.io/ocibuildere2e/go-test-service
         labels:
           type: build-1
           overlay: first-step
@@ -38,9 +38,20 @@ build:
             image: alpine
           template: template-2
       tag: v0.1.0
-      distroless: false
       cache: false
       purge: false
       context:
         localContext:
           contextPath: .
+
+login:
+  - registry: docker.io
+    token: 
+    creds:
+      plain:
+        username: ocibuilderbot
+
+push:
+  - registry: docker.io
+    image: ocibuildere2e/go-test-service
+    tag: v0.1.0
