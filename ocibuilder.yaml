@@ -38,7 +38,6 @@ build:
             image: alpine
           template: template-2
       tag: v0.1.0
-      distroless: false
       cache: false
       purge: false
       context:
