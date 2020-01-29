@@ -63,7 +63,7 @@ metadata:
     envPrivateKey: OCI_PRI_KEY
   storeConfig:
     grafeas:
-      project: "ocibuilder_test"
+      project: "image-build"
       notes:
         build: "projects/image-build/notes/oci-build"
         attestation: "projects/image-build/notes/oci-attest"
